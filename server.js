@@ -1,3 +1,5 @@
+host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
+
 const express = require('express');
 const { Storage } = require('@google-cloud/storage');
 const app = express();
