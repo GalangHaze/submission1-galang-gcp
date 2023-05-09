@@ -1,5 +1,3 @@
-host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
-
 const express = require('express');
 const { Storage } = require('@google-cloud/storage');
 const app = express();
@@ -35,6 +33,7 @@ app.get('/', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
+host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
